@@ -9,8 +9,8 @@ NEAR_RPC_URL = "https://beta.rpc.mainnet.near.org"
 # Run `echo <VALUE> | wrangler secret put <NAME>` for each of these
 
 [durable_objects]
-bindings = [{ name = "INFO", class_name = "Info" }]
+bindings = [{ name = "ACCOUNTS", class_name = "Accounts" }]
 
 [[migrations]]
 tag = "v1"
-new_classes = ["Info"]
+new_classes = ["Accounts"]

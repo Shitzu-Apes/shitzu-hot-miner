@@ -3,12 +3,15 @@ import { cors } from 'hono/cors';
 import { poweredBy } from 'hono/powered-by';
 import { match } from 'ts-pattern';
 
+import { accounts } from './accounts';
 import { Env } from './global';
 
 const app = new Hono<{ Bindings: Env }>();
 
 app.use('*', poweredBy());
 app.use('*', cors());
+
+app.route('/account', accounts);
 
 app.onError(
   err =>
@@ -27,3 +30,5 @@ app.notFound(() => {
 });
 
 export default app;
+
+export { Accounts } from './accounts';
