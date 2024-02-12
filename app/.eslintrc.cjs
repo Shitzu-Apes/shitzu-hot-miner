@@ -1,10 +1,8 @@
 /** @type { import("eslint").Linter.Config } */
 module.exports = {
-  root: true,
+  root: false,
   extends: ["plugin:svelte/recommended"],
   parserOptions: {
-    sourceType: "module",
-    ecmaVersion: 2020,
     extraFileExtensions: [".svelte"],
   },
   overrides: [
@@ -16,4 +14,13 @@ module.exports = {
       },
     },
   ],
+  rules: {
+    "import/no-unresolved": [
+      "error",
+      {
+        // FIXME
+        ignore: ["\\$app/.*", "\\$lib/.*", "svelte/.*"],
+      },
+    ],
+  },
 };
