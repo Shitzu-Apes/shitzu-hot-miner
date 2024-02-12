@@ -1,7 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "api"
+    "api",
+    "app"
   ],
   "engines": {
     "node": ">= 18"
@@ -10,8 +11,9 @@
   "license": "MIT",
   "scripts": {
     "api": "yarn workspace api",
-    "lint": "eslint --max-warnings=0 api && prettier --check '*.{json,js}' 'api/**/*.{js,ts}'",
-    "format": "prettier --write 'api/**/*.{js,ts}'"
+    "app": "yarn workspace app",
+    "lint": "eslint --max-warnings=0 && prettier --check .",
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.21.0",
