@@ -11,18 +11,10 @@
     max-width: 100vw;
     overflow-y: auto;
     flex: 1 1 auto;
-
-    @include breakpoint(mobile, max) {
-      @include breakpoint(phone, max) {
-        padding: 0.6rem 0.2rem;
-      }
-      padding: 1.2rem 0.3rem;
-      overflow: unset;
-    }
     padding: 1.8rem 0.4rem;
 
     :global(> *) {
-      max-width: 100%;
+      max-width: min(100%, 50rem);
     }
   }
 </style>

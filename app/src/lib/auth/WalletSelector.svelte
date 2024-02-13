@@ -61,11 +61,12 @@
   async function handleWalletClick(unionMod: UnionModuleState) {
     const mod = unionMod as ModuleState<Wallet>;
     const wallet = await mod.wallet();
+    console.log("wallet", wallet);
 
     match(wallet)
       .with({ type: P.union("browser", "injected") }, async (wallet) => {
         const accounts = await wallet.signIn({
-          contractId: "0xshitzu.near",
+          contractId: "game.hot.tg",
         });
         const account = accounts.pop();
         if (!account) return;

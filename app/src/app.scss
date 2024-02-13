@@ -1,5 +1,5 @@
-@use '../static/smui.css';
-@use '@material/theme/color-palette';
+@use "../static/smui.css";
+@use "@material/theme/color-palette";
 
 :root {
   --color-green: #2aa876;
@@ -8,6 +8,11 @@
 
   --color-background: var(--color-black);
   --color-link: var(--color-light-green);
+  --color-border: var(--color-light-green);
+
+  --color-err: #f36262;
+  --color-warn: #eea14a;
+  --color-info: #57a0f3;
 
   --theme-primary: var(--color-light-green);
 
@@ -29,8 +34,6 @@
   // --button-bg-color-bright: rgba(188, 190, 200, 0.6);
   // --primary-bg: #26272a;
   // --ok-color: rgb(103, 247, 103);
-  // --warn-color: rgb(238, 161, 74);
-  // --err-color: rgb(243, 98, 98);
   // --ok-bg-color: rgb(2 53 2);
   // --err-bg-color: rgb(56 5 5);
   // --text-shadow-with-bg: 1px 1px 3px rgba(0, 0, 0, 0.6),

@@ -57,19 +57,6 @@
     }
   }
 
-  nav {
-    display: flex;
-    justify-content: space-around;
-
-    @include breakpoint(mobile, max) {
-      @include breakpoint(phone, max) {
-        margin: 0 0.2rem;
-      }
-      margin: 0 0.6rem;
-    }
-    margin: 0 1rem;
-  }
-
   .login {
     display: flex;
     flex-direction: row-reverse;

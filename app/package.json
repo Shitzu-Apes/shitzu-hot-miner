@@ -16,6 +16,7 @@
     "@near-wallet-selector/here-wallet": "^8.9.5",
     "@near-wallet-selector/meteor-wallet": "^8.9.5",
     "@tarnadas/fixed-number": "0.1.0",
+    "bs58": "^5.0.0",
     "dayjs": "^1.11.10",
     "near-api-js": "^3.0.2",
     "ts-pattern": "^5.0.6"
