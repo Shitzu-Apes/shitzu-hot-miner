@@ -1,0 +1,35 @@
+[workspace]
+members = ["crates/*"]
+resolver = "2"
+
+[profile]
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true
+strip = "symbols"
+
+[profile.test.package.'*']
+codegen-units = 1
+opt-level = 1
+
+[workspace.dependencies]
+anyhow = "1"
+owo-colors = "4"
+thiserror = "1"
+tokio = { version = "1", features = ["full"] }
+
+[workspace.dependencies.near-contract-standards]
+version = "=5.0.0-alpha.2"
+
+[workspace.dependencies.near-sdk]
+version = "=5.0.0-alpha.2"
+default-features = false
+features = ["unstable"]
+
+[workspace.dependencies.near-workspaces]
+version = "0.10"
+default-features = false
