@@ -10,6 +10,7 @@
   --color-link: var(--color-light-green);
   --color-border: var(--color-light-green);
 
+  --color-ok: #2aa876;
   --color-err: #f36262;
   --color-warn: #eea14a;
   --color-info: #57a0f3;
@@ -45,6 +46,8 @@
 :root {
   --mdc-theme-primary: var(--theme-primary);
   --mdc-outlined-button-outline-color: var(--theme-primary);
+  --mdc-theme-surface: var(--color-black);
+  --mdc-theme-on-surface: #fff;
 
   .mdc-button {
     font-weight: 600;

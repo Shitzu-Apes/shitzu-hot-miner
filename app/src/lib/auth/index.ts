@@ -15,7 +15,8 @@ import type {
 // null: not logged in
 export const account$ = writable<Account | null | undefined>(undefined);
 
-export function getAccessKey(): string | undefined {
+export async function getAccessKey(): Promise<string | undefined> {
+  await new Promise((r) => setTimeout(r, 1_000));
   const selectedWalletId = window.localStorage.getItem(
     "near-wallet-selector:selectedWalletId",
   ) as AvailableWalletIds | null;

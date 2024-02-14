@@ -7,6 +7,8 @@
   import { Icon } from "@smui/common";
 
   export let type: "error" | "warning" | "info" = "info";
+
+  const size = "1.6rem";
 </script>
 
 <p
@@ -15,15 +17,27 @@
   class:info={type === "info"}
 >
   {#if type === "error"}
-    <Icon tag="svg" viewBox="0 0 24 24" style="height: 2.4rem;">
+    <Icon
+      tag="svg"
+      viewBox="0 0 24 24"
+      style={`min-height: ${size};max-height: ${size};min-width: ${size};max-width: ${size};`}
+    >
       <path fill="var(--color-err)" d={mdiAlertCircleOutline} />
     </Icon>
   {:else if type === "warning"}
-    <Icon tag="svg" viewBox="0 0 24 24" style="height: 2.4rem;">
+    <Icon
+      tag="svg"
+      viewBox="0 0 24 24"
+      style={`min-height: ${size};max-height: ${size};min-width: ${size};max-width: ${size};`}
+    >
       <path fill="var(--color-warn)" d={mdiAlertOutline} />
     </Icon>
   {:else if type === "info"}
-    <Icon tag="svg" viewBox="0 0 24 24" style="height: 2.4rem;">
+    <Icon
+      tag="svg"
+      viewBox="0 0 24 24"
+      style={`min-height: ${size};max-height: ${size};min-width: ${size};max-width: ${size};`}
+    >
       <path fill="var(--color-info)" d={mdiInformationSlabCircle} />
     </Icon>
   {/if}

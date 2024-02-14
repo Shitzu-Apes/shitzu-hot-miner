@@ -61,7 +61,6 @@
   async function handleWalletClick(unionMod: UnionModuleState) {
     const mod = unionMod as ModuleState<Wallet>;
     const wallet = await mod.wallet();
-    console.log("wallet", wallet);
 
     match(wallet)
       .with({ type: P.union("browser", "injected") }, async (wallet) => {
@@ -166,6 +165,8 @@
     display: flex;
     margin: 0.6rem;
     align-items: center;
+    width: 100%;
+    max-height: 100%;
     --img-size: 2.2rem;
 
     img {
@@ -173,7 +174,7 @@
       min-height: var(--img-size);
       max-width: var(--img-size);
       max-height: var(--img-size);
-      margin-right: 0.5rem;
+      margin-right: 0.8rem;
     }
 
     .download {

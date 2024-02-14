@@ -35,7 +35,7 @@
 
   .wrapper {
     display: flex;
-    width: 100%;
+    width: var(--spinner-width, 100%);
     max-height: 100%;
     align-items: center;
     justify-content: var(--spinner-justify-content, center);

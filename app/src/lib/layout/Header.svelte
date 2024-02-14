@@ -57,6 +57,10 @@
     }
   }
 
+  h1 {
+    text-align: center;
+  }
+
   .login {
     display: flex;
     flex-direction: row-reverse;

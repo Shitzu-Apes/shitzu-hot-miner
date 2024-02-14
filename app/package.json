@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
+    "@smui-extra/accordion": "^7.0.0-beta.16",
     "@smui/button": "7.0.0-beta.16",
     "@smui/icon-button": "7.0.0-beta.16",
     "@smui/tab": "7.0.0-beta.16",
