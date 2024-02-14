@@ -57,6 +57,11 @@ impl Contract {
     }
 
     #[private]
+    pub fn set_fee(&mut self, fee: U128) {
+        self.fee = fee.0;
+    }
+
+    #[private]
     pub fn deduct_fee(&mut self, account_id: AccountId) {
         let balance = self.accounts.get_mut(&account_id).unwrap();
         *balance = balance.checked_sub(self.fee).unwrap();
