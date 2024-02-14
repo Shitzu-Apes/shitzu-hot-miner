@@ -72,7 +72,7 @@
   :global(.field) {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.4rem;
     padding: 0.8rem 0 0.3rem;
   }
   :global(.field:first-child) {

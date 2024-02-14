@@ -117,13 +117,13 @@
           {#if status === "success"}
             <div class="icon">
               <Icon tag="svg" viewBox="0 0 24 24">
-                <path fill="var(--ok-color)" d={mdiCheckCircle} />
+                <path fill="var(--color-ok)" d={mdiCheckCircle} />
               </Icon>
             </div>
           {:else}
             <div class="icon">
               <Icon tag="svg" viewBox="0 0 24 24">
-                <path fill="var(--err-color)" d={mdiCancel} />
+                <path fill="var(--color-err)" d={mdiCancel} />
               </Icon>
             </div>
           {/if}
@@ -199,8 +199,10 @@
   }
 
   .icon {
-    width: to-rem(28px);
-    height: to-rem(28px);
+    min-width: to-rem(28px);
+    max-width: to-rem(28px);
+    min-height: to-rem(28px);
+    max-height: to-rem(28px);
     padding: to-rem(4px);
     margin-right: 0.4rem;
   }

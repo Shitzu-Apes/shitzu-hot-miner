@@ -5,7 +5,6 @@
   import { MessageBox } from "$lib/components";
   import { Section } from "$lib/layout";
   import type { Condition } from "$lib/models";
-  import { shitzuTokenContract$, type FtContract } from "$lib/near";
 
   export let account: Account;
 
@@ -19,9 +18,7 @@
   }
 
   let nearBalance: FixedNumber | undefined;
-  let shitzuBalance: FixedNumber | undefined;
 
-  $: fetchShitzuBalance($shitzuTokenContract$);
   fetchNearBalance();
 
   async function fetchNearBalance() {
@@ -49,12 +46,6 @@
       new FixedNumber(json.result.locked, 24),
     );
   }
-
-  async function fetchShitzuBalance(c: Promise<FtContract>) {
-    const contract = await c;
-    const bal = await contract.ft_balance_of({ account_id: account.accountId });
-    shitzuBalance = new FixedNumber(bal, 18);
-  }
 </script>
 
 <Section header="Wallet" {condition}>
@@ -77,9 +68,5 @@
         of gas.
       </MessageBox>
     {/if}
-  </div>
-  <div class="field">
-    <span>SHITZU balance:</span>
-    <span>{shitzuBalance ? shitzuBalance.format() : "-"}</span>
   </div>
 </Section>

@@ -14,6 +14,9 @@
   --color-err: #f36262;
   --color-warn: #eea14a;
   --color-info: #57a0f3;
+  --color-bg-ok: #023502;
+  --color-bg-err: #380505;
+  --color-grey: #888;
 
   --theme-primary: var(--color-light-green);
 
@@ -35,8 +38,6 @@
   // --button-bg-color-bright: rgba(188, 190, 200, 0.6);
   // --primary-bg: #26272a;
   // --ok-color: rgb(103, 247, 103);
-  // --ok-bg-color: rgb(2 53 2);
-  // --err-bg-color: rgb(56 5 5);
   // --text-shadow-with-bg: 1px 1px 3px rgba(0, 0, 0, 0.6),
   //   1px -1px 3px rgba(0, 0, 0, 0.6), -1px 1px 3px rgba(0, 0, 0, 0.6),
   //   -1px -1px 3px rgba(0, 0, 0, 0.6);
@@ -48,6 +49,8 @@
   --mdc-outlined-button-outline-color: var(--theme-primary);
   --mdc-theme-surface: var(--color-black);
   --mdc-theme-on-surface: #fff;
+  --mdc-outlined-button-disabled-label-text-color: var(--color-grey);
+  --mdc-outlined-button-disabled-outline-color: var(--color-grey);
 
   .mdc-button {
     font-weight: 600;
@@ -55,6 +58,14 @@
 
   .mdc-button__icon {
     margin: 0;
+  }
+
+  .mdc-tab__text-label {
+    color: #fff;
+  }
+
+  .mdc-snackbar {
+    z-index: 1000;
   }
 }
 

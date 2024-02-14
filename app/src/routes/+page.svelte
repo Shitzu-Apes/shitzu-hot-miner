@@ -4,6 +4,7 @@
   import { account$ } from "$lib/auth";
   import { AccessKey, MessageBox, Wallet } from "$lib/components";
   import ProgressSpinner from "$lib/components/ProgressSpinner.svelte";
+  import ShitzuAccount from "$lib/components/ShitzuAccount.svelte";
 </script>
 
 <div class="page">
@@ -11,6 +12,7 @@
     <Accordion multiple>
       <Wallet account={$account$} />
       <AccessKey account={$account$} />
+      <ShitzuAccount account={$account$} />
     </Accordion>
   {:else if $account$ === undefined}
     <ProgressSpinner />

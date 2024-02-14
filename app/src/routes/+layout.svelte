@@ -125,9 +125,9 @@
   }
 
   :global(.snackbar-success .mdc-snackbar__surface) {
-    background-color: var(--ok-bg-color);
+    background-color: var(--color-bg-ok);
   }
   :global(.snackbar-error .mdc-snackbar__surface) {
-    background-color: var(--err-bg-color);
+    background-color: var(--color-bg-err);
   }
 </style>
