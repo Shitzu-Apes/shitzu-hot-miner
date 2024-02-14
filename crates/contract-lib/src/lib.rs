@@ -147,6 +147,6 @@ impl Contract {
     }
 
     pub fn get_balance(&self, account_id: AccountId) -> U128 {
-        (*self.accounts.get(&account_id).unwrap()).into()
+        (*self.accounts.get(&account_id).unwrap_or(&0)).into()
     }
 }
